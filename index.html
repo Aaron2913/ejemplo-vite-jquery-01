@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Demo jQuery y jQuery UI con Vite</title>
+  </head>
+  <body>
+    <a href="#contenido-principal" class="sr-only">Saltar al contenido principal</a>
+
+    <header>
+      <h1>Ejemplo de uso de jQuery - Vite</h1>
+      <hr />
+    </header>
+
+    <main id="contenido-principal">
+      <div class="columns">
+        <section class="column uno" aria-labelledby="titulo-formulario">
+          <h2 id="titulo-formulario">Ingrese datos</h2>
+
+          <form id="formulario-datos" action="#" method="post" novalidate>
+            <div class="campo">
+              <label for="nombre">Escriba su nombre</label>
+              <input
+                type="text"
+                name="nombre"
+                id="nombre"
+                autocomplete="given-name"
+                required
+                aria-describedby="ayuda-nombre"
+              />
+              <div id="ayuda-nombre" class="ayuda">
+                Ingrese únicamente su nombre.
+              </div>
+            </div>
+
+            <div class="campo">
+              <label for="apellido">Escriba su apellido</label>
+              <input
+                type="text"
+                name="apellido"
+                id="apellido"
+                autocomplete="family-name"
+                required
+                aria-describedby="ayuda-apellido"
+              />
+              <div id="ayuda-apellido" class="ayuda">
+                Ingrese su apellido.
+              </div>
+            </div>
+
+            <div class="campo">
+              <label for="fecha_nacimiento">Escriba su fecha de nacimiento</label>
+              <input
+                type="text"
+                name="fecha_nacimiento"
+                id="fecha_nacimiento"
+                autocomplete="bday"
+                required
+                aria-describedby="ayuda-fecha"
+              />
+              <div id="ayuda-fecha" class="ayuda">
+                Puede escribir la fecha o seleccionarla desde el calendario.
+              </div>
+            </div>
+
+            <button type="submit">Ingresar datos</button>
+          </form>
+
+          <div
+            id="estado-formulario"
+            class="sr-only"
+            aria-live="polite"
+            aria-atomic="true"
+          ></div>
+        </section>
+
+        <section class="column dos" aria-labelledby="titulo-resultados">
+          <h2 id="titulo-resultados">Presentación de información</h2>
+
+          <div
+            id="resultado"
+            role="status"
+            aria-live="polite"
+            aria-atomic="true"
+          >
+            <p class="resultado-item"><strong>Nombre:</strong> <span id="mensajeFinal1">Sin datos</span></p>
+            <p class="resultado-item"><strong>Apellido:</strong> <span id="mensajeFinal2">Sin datos</span></p>
+            <p class="resultado-item"><strong>Fecha:</strong> <span id="mensajeFinal3">Sin datos</span></p>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

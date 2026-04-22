@@ -1,0 +1,83 @@
+body {
+  background: #fefefd;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.columns {
+  width: 100%;
+}
+
+.column {
+  width: 100%;
+}
+
+@media (min-width: 48em) {
+  .column {
+    width: 40%;
+    float: left;
+  }
+
+  .columns::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+.uno {
+  padding: 10px;
+  border-right-style: dashed;
+  border-width: thin;
+}
+
+.dos {
+  padding: 10px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.campo {
+  margin-bottom: 1rem;
+}
+
+label {
+  display: inline-block;
+  margin-bottom: 0.35rem;
+  font-weight: 600;
+}
+
+input {
+  width: 100%;
+  max-width: 320px;
+  padding: 0.5rem;
+  box-sizing: border-box;
+}
+
+button {
+  padding: 0.6rem 1rem;
+  cursor: pointer;
+}
+
+.resultado-item {
+  margin-bottom: 0.75rem;
+}
+
+.ayuda {
+  font-size: 0.95rem;
+}
+
+:focus {
+  outline: 3px solid #005fcc;
+  outline-offset: 2px;
+}
